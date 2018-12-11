@@ -1,3 +1,9 @@
-<p>
-  hoge works!
-</p>
+<div>
+  <h1>ボタンサンプル</h1>
+
+  <app-button
+    *ngFor="let rec of data" [title]="rec.title"
+    (clickEvent)="onClicK(rec.index);"
+  ></app-button>
+
+</div>

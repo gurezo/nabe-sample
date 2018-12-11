@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hoge.component.scss']
 })
 export class HogeComponent implements OnInit {
+  data = [{ title: 'Alpha', index: 1 }, { title: 'Beta', index: 2 }, { title: 'Ganma', index: 3 }];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  onClicK(idx) {
+    alert('インデックス: ' + idx);
   }
-
 }
