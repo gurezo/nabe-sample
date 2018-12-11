@@ -31,7 +31,7 @@ export class HogeComponent implements OnInit {
     if (rec.title === 'Beta') {
       alert('Yahooo!!!!');
     } else {
-      alert('インデックス: ' + rec.idx);
+      alert('インデックス: ' + rec.index);
     }
   }
 }
