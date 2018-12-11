@@ -6,10 +6,18 @@
     ButtonComponentのclickEvent/EventEmitterのイベント通知を
     HogeComponentのonClicKメソッドで処理する
    -->
-  <app-button
+<!--
+   <app-button
     *ngFor="let rec of data" [title]="rec.title"
     (clickEvent)="onClicK(rec.index);"
   ></app-button>
+-->
+
+<!--   // 引数を{ title: '〜〜〜', index: ？ }で渡す -->
+  <app-button
+    *ngFor="let rec of data" [title]="rec.title"
+    (clickEvent)="onClicK(rec);">
+  </app-button>
 
   <br>
   <app-button [title]="'戻る'" [routerLink]="['/']"></app-button>
