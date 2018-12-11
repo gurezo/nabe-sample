@@ -6,10 +6,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bar.component.scss']
 })
 export class BarComponent implements OnInit {
+  val = 0;
+  minVal = 0;
+  maxVal = 100;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
+    this.val = 0;
   }
 
+  onIncrement() {
+    if ((this.val + 1) > this.maxVal) {
+      this.val = this.maxVal;
+    } else {
+      this.val += 10;
+    }
+    console.log(this.val);
+  }
+
+  onDecrement() {
+    if ((this.val - 1) < this.minVal) {
+      this.val = this.minVal;
+    } else {
+      this.val -= 10;
+    }
+    console.log(this.val);
+  }
 }
