@@ -16,8 +16,9 @@ export class BarComponent implements OnInit {
     this.val = 0;
   }
 
+  // ゲージアップ用メソッド
   onIncrement() {
-    if ((this.val + 1) > this.maxVal) {
+    if (this.val + 1 > this.maxVal) {
       this.val = this.maxVal;
     } else {
       this.val += 10;
@@ -25,8 +26,9 @@ export class BarComponent implements OnInit {
     console.log(this.val);
   }
 
+  // ゲージダウン用メソッド
   onDecrement() {
-    if ((this.val - 1) < this.minVal) {
+    if (this.val - 1 < this.minVal) {
       this.val = this.minVal;
     } else {
       this.val -= 10;

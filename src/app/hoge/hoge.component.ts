@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hoge.component.scss']
 })
 export class HogeComponent implements OnInit {
+
+  // ボタンのループ処理用JSON
   data = [{ title: 'Alpha', index: 1 }, { title: 'Beta', index: 2 }, { title: 'Ganma', index: 3 }];
 
   constructor() {}
