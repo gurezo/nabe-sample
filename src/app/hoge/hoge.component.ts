@@ -15,6 +15,11 @@ export class HogeComponent implements OnInit {
   ngOnInit() {}
 
   onClicK(idx) {
-    alert('インデックス: ' + idx);
+    // alert('インデックス: ' + idx);
+    if (idx === 2) {
+      alert('Yahooo!!!!');
+    } else {
+      alert('インデックス: ' + idx);
+    }
   }
 }
