@@ -2,15 +2,20 @@
   <h1>
     テーブルサンプル１
   </h1>
-  <h2>ngFor版</h2>
-  <table>
+  <h2>ngFor & requireデータ取得方式版</h2>
+  <table class="reqireTable">
+    <!-- データヘッダの配列をループでセット -->
+    <!-- table.component.ts L17-31 -->
+    <tr>
+      <td *ngFor="let rec of headrData">{{rec.title}}</td>
+    </tr>
     <!-- データの配列をループでセット -->
+    <!-- table.component.ts L13-15, L36-37 -->
     <tr *ngFor="let rec of recArray">
       <td>{{rec.id}}</td>
       <td>{{rec.firstName}}</td>
       <td>{{rec.lastName}}</td>
     </tr>
-
   </table>
 
   <br>
@@ -22,6 +27,7 @@
 
   <!-- ライブラリ実装 -->
   <!-- ライブラリ用の変数 dtOptions を代入 -->
+    <!-- table.component.ts L17-31, L41-45 -->
   <table datatable [dtOptions]="dtOptions" class="row-border hover"></table>
 
   <br>
