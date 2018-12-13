@@ -5,12 +5,20 @@
   <h2>ngFor & requireデータ取得方式版</h2>
   <table class="reqireTable">
     <!-- データヘッダの配列をループでセット -->
-    <!-- table.component.ts L17-31 -->
+    <!-- table.component.ts L20-34 -->
     <tr>
       <td *ngFor="let rec of headrData">{{rec.title}}</td>
     </tr>
     <!-- データの配列をループでセット -->
-    <!-- table.component.ts L13-15, L36-37 -->
+    <!--
+      requireを使って、データを取得する場合(邪道)
+      table.component.ts ：L16-18, L39-42
+     -->
+    <!--
+      仕事ならserviceを使って、データを取得する場合
+      table.component.ts ：L14, L18, L44-51, L54-57
+      table.module.ts ：L8-9, L16
+     -->
     <tr *ngFor="let rec of recArray">
       <td>{{rec.id}}</td>
       <td>{{rec.firstName}}</td>
