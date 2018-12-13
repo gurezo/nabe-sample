@@ -1,0 +1,30 @@
+<div>
+  <h1>
+    テーブルサンプル１
+  </h1>
+  <h2>ngFor版</h2>
+  <table>
+    <!-- データの配列をループでセット -->
+    <tr *ngFor="let rec of recArray">
+      <td>{{rec.id}}</td>
+      <td>{{rec.firstName}}</td>
+      <td>{{rec.lastName}}</td>
+    </tr>
+
+  </table>
+
+  <br>
+
+  <h1>
+    Angular DataTables
+  </h1>
+  <a href="https://l-lin.github.io/angular-datatables/#/welcome">公式サイト：Angular DataTables</a>
+
+  <!-- ライブラリ実装 -->
+  <!-- ライブラリ用の変数 dtOptions を代入 -->
+  <table datatable [dtOptions]="dtOptions" class="row-border hover"></table>
+
+  <br>
+  <app-button [title]="'戻る'" [routerLink]="['/']"></app-button>
+
+</div>

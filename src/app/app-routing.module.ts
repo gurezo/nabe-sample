@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'bar',
     loadChildren: './bar/bar.module#BarModule'
+  },
+  {
+    path: 'table',
+    loadChildren: './table/table.module#TableModule'
   }
 ];
 
